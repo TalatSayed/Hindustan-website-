@@ -1,0 +1,103 @@
+/* SECTION */
+
+.stats-section {
+    padding: 120px 80px;
+    background: #f4f4f4;
+}
+
+/* TWO COLUMN LAYOUT */
+
+.stats-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* INTRO TEXT */
+
+.stats-intro h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.stats-intro p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+/* ORANGE LINE */
+
+.stats-intro h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ff6a00;
+    margin-top: 15px;
+}
+
+/* GRID */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* CARD */
+
+.stat-card {
+    background: #eeeeee;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 190px;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.35s ease;
+}
+
+/* HOVER EFFECT */
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* TEXT */
+
+.stat-text h2 {
+    color: #ff6a00;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.stat-text p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.4;
+    max-width: 180px;
+}
+
+/* ICON */
+
+.stat-icon img {
+    width: 60px;
+    opacity: 0.7;
+    transition: all 0.35s ease;
+}
+
+/* ICON HOVER */
+
+.stat-card:hover .stat-icon img {
+    transform: scale(1.08);
+    opacity: 1;
+}

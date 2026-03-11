@@ -1,0 +1,343 @@
+/* =================================
+GLOBAL FIXES
+================================ */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* =================================
+SMALL DESKTOP / LAPTOP
+================================ */
+
+@media (max-width:1200px) {
+
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+}
+
+
+/* =================================
+TABLETS
+================================ */
+
+@media (max-width:1024px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+}
+
+
+/* =================================
+NAVBAR RESPONSIVE
+================================ */
+
+@media (max-width:900px) {
+
+    #navbar {
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =================================
+GENERAL MOBILE LAYOUT
+================================ */
+
+@media (max-width:768px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+
+
+/* =================================
+SMALL PHONES
+================================ */
+
+@media (max-width:480px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+}
+
+
+/* =================================
+IMAGE FLOW SECTION
+================================ */
+
+@media (max-width:768px) {
+
+    .image-flow {
+        overflow-x: auto;
+        display: flex;
+        gap: 15px;
+    }
+
+    .image-flow img {
+        width: 220px;
+        border-radius: 10px;
+        flex-shrink: 0;
+    }
+
+}
+
+
+/* =================================
+EXPERTISE SECTION (ORBIT → GRID)
+================================ */
+
+@media (max-width:1100px) {
+
+    .expertise-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards-grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+        margin-top: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        position: relative;
+        width: 170px;
+        height: 170px;
+    }
+
+    .c1,
+    .c2,
+    .c3,
+    .c4,
+    .c5,
+    .c6,
+    .c7,
+    .c8 {
+        top: auto;
+        left: auto;
+    }
+
+}
+
+
+/* =================================
+EXPERTISE MOBILE
+================================ */
+
+@media (max-width:600px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .expertise {
+        padding: 80px 20px;
+    }
+
+    .expertise-text {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .expertise-text h3 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =================================
+CARD IMAGE SIZE
+================================ */
+
+.card img {
+    width: 60px;
+    height: auto;
+}
+
+
+/* =================================
+WHY WE ARE DIFFERENT SECTION
+================================ */
+
+/* remove fixed height */
+
+.stats-section {
+    height: auto;
+    overflow: visible;
+}
+
+
+/* tablet */
+
+@media (max-width:1000px) {
+
+    .stats-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .stats-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stats-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* mobile */
+
+@media (max-width:600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* ===============================
+WHY WE ARE DIFFERENT RESPONSIVE
+================================ */
+
+@media (max-width:1000px) {
+
+    .stats-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .stats-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stats-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width:600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
