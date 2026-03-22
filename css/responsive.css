@@ -341,3 +341,453 @@ WHY WE ARE DIFFERENT RESPONSIVE
     }
 
 }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stat-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.stat-icon img {
+    width: 45px;
+}
+
+.expertise-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .expertise-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =================================
+STATS GRID RESPONSIVE FIX
+================================ */
+
+@media (max-width:1000px) {
+
+    .stats-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .stats-intro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+}
+
+
+/* =================================
+EXPERTISE RESPONSIVE FIX
+================================ */
+
+@media (max-width:992px) {
+
+    .expertise-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+
+}
+
+/* ===============================
+TABLET RESPONSIVE (768px–1024px)
+================================ */
+
+@media (max-width:1024px) {
+
+    /* stats section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    /* expertise layout */
+    .expertise-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    /* expertise cards */
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 25px;
+    }
+
+    .card {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+/* =================================
+FIX STATS SECTION RESPONSIVE
+================================ */
+
+@media (max-width:1024px) {
+
+    .stats-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+}
+
+
+/* =================================
+FIX EXPERTISE RESPONSIVE
+================================ */
+
+@media (max-width:1024px) {
+
+    .expertise-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        justify-items: center;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+
+}
+
+
+/* =================================
+ENSURE BASE GRID EXISTS
+================================ */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.expertise-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+/* =================================
+TEXT ABOVE CARDS FOR TABLET & MOBILE ONLY
+================================ */
+
+@media (max-width:1024px) {
+
+    .expertise-wrapper {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .expertise-text {
+
+        order: -1;
+        /* moves text above cards */
+
+        margin-bottom: 30px;
+
+    }
+
+}
+
+/* =================================
+STATS CARDS PERFECT RESPONSIVE
+================================ */
+
+/* desktop */
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* tablet */
+@media (max-width:1024px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        padding: 0 10px;
+
+    }
+
+}
+
+
+/* mobile */
+@media (max-width:768px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+    .stat-card {
+
+        padding: 18px;
+
+        border-radius: 18px;
+
+    }
+
+    .stat-card h2 {
+
+        font-size: 20px;
+
+    }
+
+    .stat-card p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+}
+
+
+/* small mobile */
+@media (max-width:420px) {
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =================================
+FIX DESKTOP TEXT WIDTH (ONLY TEXT)
+================================ */
+
+@media (min-width:1100px) {
+
+    .expertise-wrapper {
+
+        grid-template-columns: 520px 1fr;
+
+        gap: 70px;
+
+    }
+
+    .expertise-text {
+
+        max-width: 520px;
+
+    }
+
+    .expertise-text p {
+
+        max-width: 520px;
+
+        line-height: 1.7;
+
+        font-size: 16px;
+
+        color: #555;
+
+    }
+
+}
+
+/* =================================
+FIX EXPERTISE TEXT LAYOUT (FINAL)
+================================ */
+
+/* DESKTOP ONLY */
+
+@media (min-width:1100px) {
+
+    .expertise-wrapper {
+
+        display: grid;
+
+        grid-template-columns: 520px 1fr;
+        /* wider text column */
+
+        gap: 80px;
+
+        align-items: center;
+
+    }
+
+    .expertise-text {
+
+        width: 100%;
+
+        max-width: 520px;
+
+    }
+
+    .expertise-text h3 {
+
+        font-size: 48px;
+
+        line-height: 1.15;
+
+        margin-bottom: 20px;
+
+    }
+
+    .expertise-text p {
+
+        max-width: 520px;
+        /* prevents vertical paragraph */
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        color: #555;
+
+    }
+
+}
