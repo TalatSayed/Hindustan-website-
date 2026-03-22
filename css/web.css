@@ -164,12 +164,23 @@
     pointer-events: none;
 }
 
-video::-webkit-media-controls {
-    display: none !important;
+@media (max-width:1024px) {
+
+    .hero {
+        height: 80vh;
+    }
+
 }
 
-video::-webkit-media-controls-start-playback-button {
-    display: none !important;
+
+/* mobile */
+
+@media (max-width:600px) {
+
+    .hero {
+        height: 60vh;
+    }
+
 }
 
 
