@@ -325,40 +325,98 @@
 }
 
 /* ============================
-REMOVE LAG ON MOBILE
+MODERN CARD INTERACTION
 ============================ */
 
-@media(max-width:768px) {
+.card {
+    position: relative;
+    cursor: pointer;
+}
 
-    .card {
-        perspective: none;
-        transform: none;
-    }
+/* remove heavy 3D */
 
-    .card-inner {
-        transform: none !important;
-        transition: 0.25s ease;
-    }
+.card-inner {
+    transform: none !important;
+    transition: all 0.35s ease;
+}
 
-    /* disable flip */
-    .card:hover .card-inner {
-        transform: none;
-    }
+/* modern hover */
 
-    /* show front only */
-    .card-back {
-        display: none;
-    }
+.card:hover {
 
-    /* lighter shadow improves performance */
-    .card-front {
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    }
+    transform: translateY(-6px);
 
 }
 
-/* flip on mobile click */
+/* modern shadow */
 
-.card.flip .card-inner {
-    transform: rotateY(180deg);
+.card-front {
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.35s;
+
+}
+
+/* hidden content initially */
+
+.card-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    transition: 0.35s;
+
+}
+
+/* show content on hover desktop */
+
+.card:hover .card-back {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+.card:hover .card-front {
+
+    opacity: 0;
+
+}
+
+
+/* mobile tap interaction */
+
+.card.active .card-back {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+.card.active .card-front {
+
+    opacity: 0;
+
+}
+
+
+/* smoother feel */
+
+.card-front,
+.card-back {
+
+    border-radius: 18px;
+
+}
+
+.card:hover {
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
