@@ -1,12 +1,11 @@
 
 
-document.querySelectorAll(".card").forEach(function (card) {
+document.querySelectorAll(".card").forEach(card => {
 
-    card.addEventListener("click", function () {
+    card.addEventListener("click", () => {
 
-        this.classList.toggle("flip");
+        card.classList.toggle("active");
 
     });
 
 });
-
