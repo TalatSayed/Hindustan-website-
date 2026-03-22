@@ -323,3 +323,36 @@
     border-radius: 20px;
     z-index: -1;
 }
+
+/* ============================
+REMOVE LAG ON MOBILE
+============================ */
+
+@media(max-width:768px) {
+
+    .card {
+        perspective: none;
+        transform: none;
+    }
+
+    .card-inner {
+        transform: none !important;
+        transition: 0.25s ease;
+    }
+
+    /* disable flip */
+    .card:hover .card-inner {
+        transform: none;
+    }
+
+    /* show front only */
+    .card-back {
+        display: none;
+    }
+
+    /* lighter shadow improves performance */
+    .card-front {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+}
