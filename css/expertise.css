@@ -325,98 +325,34 @@
 }
 
 /* ============================
-MODERN CARD INTERACTION
+SMOOTH MOBILE FLIP FIX
 ============================ */
 
-.card {
-    position: relative;
-    cursor: pointer;
-}
+@media(max-width:768px) {
 
-/* remove heavy 3D */
+    .card {
 
-.card-inner {
-    transform: none !important;
-    transition: all 0.35s ease;
-}
+        transform: translateZ(0);
 
-/* modern hover */
+        will-change: transform;
 
-.card:hover {
+    }
 
-    transform: translateY(-6px);
+    /* keep flip but lighter */
 
-}
+    .card-inner {
 
-/* modern shadow */
+        transition: transform 0.45s ease;
 
-.card-front {
+    }
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* reduce heavy shadow */
 
-    transition: 0.35s;
+    .card-front,
+    .card-back {
 
-}
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 
-/* hidden content initially */
+    }
 
-.card-back {
-
-    position: absolute;
-
-    inset: 0;
-
-    opacity: 0;
-
-    transform: translateY(8px);
-
-    transition: 0.35s;
-
-}
-
-/* show content on hover desktop */
-
-.card:hover .card-back {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-}
-
-.card:hover .card-front {
-
-    opacity: 0;
-
-}
-
-
-/* mobile tap interaction */
-
-.card.active .card-back {
-
-    opacity: 1;
-
-    transform: translateY(0);
-
-}
-
-.card.active .card-front {
-
-    opacity: 0;
-
-}
-
-
-/* smoother feel */
-
-.card-front,
-.card-back {
-
-    border-radius: 18px;
-
-}
-
-.card:hover {
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
