@@ -356,3 +356,9 @@ REMOVE LAG ON MOBILE
     }
 
 }
+
+/* flip on mobile click */
+
+.card.flip .card-inner {
+    transform: rotateY(180deg);
+}
