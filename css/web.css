@@ -212,3 +212,198 @@ video::-webkit-media-controls-start-playback-button {
     }
 
 }
+
+/* =================================
+HAMBURGER BUTTON
+================================ */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* hamburger color when navbar becomes white */
+
+#navbar.show .menu-toggle span,
+#navbar.scrolled .menu-toggle span {
+    background: black;
+}
+
+
+/* =================================
+TABLET + MOBILE NAVBAR
+================================ */
+
+@media (max-width:900px) {
+
+    #navbar {
+        padding: 20px;
+    }
+
+    /* show hamburger */
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* hide horizontal menu */
+
+    .navbar-nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 10px;
+
+        display: none;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    }
+
+    /* show menu when active */
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    /* dropdown mobile */
+
+    .dropdown-menu {
+
+        position: static;
+
+        box-shadow: none;
+
+        padding-left: 15px;
+
+        display: none;
+
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    /* nav links mobile */
+
+    .nav-link {
+
+        color: black;
+
+        display: block;
+
+        padding: 12px 0;
+
+        width: 100%;
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* space between logo and hamburger */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* give hamburger some distance */
+
+.menu-toggle {
+    margin-left: auto;
+}
+
+
+/* optional: control spacing on small screens */
+
+@media (max-width:900px) {
+
+    #navbar {
+        padding: 18px 25px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+}
+
+/* =================================
+FIX LOGO & HAMBURGER SPACING
+================================ */
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* push hamburger to right */
+
+.menu-toggle {
+
+    margin-left: auto;
+
+}
+
+
+/* ensure logo does not stretch */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+
+}
+
+
+/* better spacing on mobile */
+
+@media (max-width:900px) {
+
+    #navbar {
+
+        padding: 18px 28px;
+
+    }
+
+    .logo img {
+
+        height: 38px;
+
+    }
+
+}
+
+.menu-toggle {
+    margin-left: 40px;
+}
