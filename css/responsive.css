@@ -873,89 +873,29 @@ FIX EXPERTISE TEXT LAYOUT (FINAL)
 }
 
 /* =================================
-FORCE 2 CARDS PER ROW ON MOBILE
-FINAL FIX
+FINAL FORCE FIX — 2 CARDS ON PHONE
+WORKS EVEN WITH ORBIT CSS
 ================================ */
 
 @media (max-width:600px) {
 
     .cards-grid {
 
-        display: grid !important;
+        display: flex !important;
 
-        grid-template-columns: repeat(2, 1fr) !important;
+        flex-wrap: wrap !important;
 
-        gap: 16px;
+        justify-content: center;
 
-        justify-items: center;
-
-        width: 100%;
-
-    }
-
-    .card {
+        gap: 14px;
 
         width: 100%;
 
-        max-width: 170px;
-
-        height: 170px;
-
-        margin: auto;
+        position: static !important;
 
     }
 
-}
-
-
-/* extra small phones */
-
-@media (max-width:400px) {
-
-    .cards-grid {
-
-        grid-template-columns: repeat(2, 1fr) !important;
-
-        gap: 12px;
-
-    }
-
-    .card {
-
-        max-width: 150px;
-
-        height: 150px;
-
-    }
-
-}
-
-/* =================================
-FORCE 2 CARDS PER ROW ON PHONE
-REMOVE ORBIT POSITION ON MOBILE
-================================ */
-
-@media (max-width:600px) {
-
-    /* change orbit layout to grid */
-
-    .cards-grid {
-
-        display: grid !important;
-
-        grid-template-columns: repeat(2, 1fr) !important;
-
-        gap: 16px;
-
-        justify-items: center;
-
-        width: 100%;
-
-        position: static;
-
-    }
-
-    /* remove absolute orbit positions */
+    /* remove orbit absolute positions */
 
     .c1,
     .c2,
@@ -966,7 +906,7 @@ REMOVE ORBIT POSITION ON MOBILE
     .c7,
     .c8 {
 
-        position: relative !important;
+        position: static !important;
 
         top: auto !important;
 
@@ -976,17 +916,15 @@ REMOVE ORBIT POSITION ON MOBILE
 
     }
 
-    /* card size */
+    /* each card takes 50% width */
 
     .card {
 
-        width: 100%;
+        flex: 0 0 45% !important;
 
-        max-width: 160px;
+        max-width: 45% !important;
 
         height: 160px;
-
-        margin: auto;
 
         display: flex;
 
