@@ -1009,3 +1009,103 @@ WHY WE ARE DIFFERENT
     }
 
 }
+
+/* =================================
+WHY WE ARE DIFFERENT
+PERFECT SMARTPHONE ALIGNMENT
+2 CARDS PER ROW
+================================ */
+
+@media (max-width:768px) {
+
+    /* section spacing */
+
+    .stats-section {
+
+        padding: 60px 16px;
+
+    }
+
+    /* grid layout */
+
+    .stats-grid {
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 14px;
+
+        width: 100%;
+
+        margin: 0 auto;
+
+    }
+
+    /* perfectly equal cards */
+
+    .stat-card {
+
+        width: 100%;
+
+        min-height: 130px;
+
+        padding: 18px;
+
+        border-radius: 18px;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        box-sizing: border-box;
+
+    }
+
+    /* text alignment */
+
+    .stat-text {
+
+        max-width: 70%;
+
+    }
+
+    .stat-text h2 {
+
+        font-size: 18px;
+
+        line-height: 1.2;
+
+    }
+
+    .stat-text p {
+
+        font-size: 13px;
+
+        line-height: 1.4;
+
+    }
+
+    /* icon */
+
+    .stat-icon {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+    .stat-icon img {
+
+        width: 34px;
+
+        height: auto;
+
+    }
+
+}
