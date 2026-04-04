@@ -101,3 +101,31 @@
     transform: scale(1.08);
     opacity: 1;
 }
+
+@media (max-width:600px) {
+
+    .stats-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 25px;
+        border-radius: 20px;
+        min-height: 150px;
+    }
+
+    .stat-text h2 {
+        font-size: 22px;
+    }
+
+    .stat-icon img {
+        width: 45px;
+    }
+
+}
