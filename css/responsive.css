@@ -929,3 +929,71 @@ FINAL FIX
     }
 
 }
+
+/* =================================
+FORCE 2 CARDS PER ROW ON PHONE
+REMOVE ORBIT POSITION ON MOBILE
+================================ */
+
+@media (max-width:600px) {
+
+    /* change orbit layout to grid */
+
+    .cards-grid {
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 16px;
+
+        justify-items: center;
+
+        width: 100%;
+
+        position: static;
+
+    }
+
+    /* remove absolute orbit positions */
+
+    .c1,
+    .c2,
+    .c3,
+    .c4,
+    .c5,
+    .c6,
+    .c7,
+    .c8 {
+
+        position: relative !important;
+
+        top: auto !important;
+
+        left: auto !important;
+
+        transform: none !important;
+
+    }
+
+    /* card size */
+
+    .card {
+
+        width: 100%;
+
+        max-width: 160px;
+
+        height: 160px;
+
+        margin: auto;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+}
