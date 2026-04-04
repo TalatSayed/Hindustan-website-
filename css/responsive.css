@@ -458,13 +458,13 @@ EXPERTISE RESPONSIVE FIX
 @media (max-width:600px) {
 
     .cards-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards in one row */
+        gap: 15px;
     }
 
     .card {
-        width: 200px;
-        height: 200px;
-        margin: auto;
+        width: 100%;
+        height: auto;
     }
 
 }
