@@ -935,3 +935,77 @@ WORKS EVEN WITH ORBIT CSS
     }
 
 }
+
+/* =================================
+WHY WE ARE DIFFERENT
+2 CARDS PER ROW (FINAL FIX)
+================================ */
+
+/* tablet */
+@media (max-width:1024px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* mobile */
+@media (max-width:600px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 16px;
+
+    }
+
+    .stat-card {
+
+        padding: 18px;
+
+        border-radius: 18px;
+
+        min-height: 140px;
+
+    }
+
+}
+
+
+/* small phones like iPhone 15 Pro */
+@media (max-width:430px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        gap: 14px;
+
+    }
+
+    .stat-text h2 {
+
+        font-size: 18px;
+
+    }
+
+    .stat-text p {
+
+        font-size: 12px;
+
+    }
+
+    .stat-icon img {
+
+        width: 38px;
+
+    }
+
+}
