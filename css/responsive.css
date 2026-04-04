@@ -458,7 +458,8 @@ EXPERTISE RESPONSIVE FIX
 @media (max-width:600px) {
 
     .cards-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards in one row */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cards in one row */
         gap: 15px;
     }
 
@@ -790,4 +791,14 @@ FIX EXPERTISE TEXT LAYOUT (FINAL)
 
     }
 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
