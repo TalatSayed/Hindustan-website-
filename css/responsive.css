@@ -1,147 +1,65 @@
 /* =================================
-GLOBAL FIXES
+GLOBAL SETTINGS
 ================================ */
 
-html,
-body {
-    overflow-x: hidden;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+html,body{
+overflow-x:hidden;
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.6;
+color:#333;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+.container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
 
 
 /* =================================
-SMALL DESKTOP / LAPTOP
+NAVBAR
 ================================ */
 
-@media (max-width:1200px) {
+#navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#0d6efd;
+color:white;
+}
 
-    .container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+.navbar-nav{
+display:flex;
+gap:30px;
+}
 
+.nav-link{
+text-decoration:none;
+color:white;
+font-weight:500;
 }
 
 
 /* =================================
-TABLETS
+SECTION SPACING
 ================================ */
 
-@media (max-width:1024px) {
-
-    h1 {
-        font-size: 34px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 22px;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-
-}
-
-
-/* =================================
-NAVBAR RESPONSIVE
-================================ */
-
-@media (max-width:900px) {
-
-    #navbar {
-        padding: 20px;
-    }
-
-    .navbar-nav {
-        gap: 20px;
-    }
-
-    .nav-link {
-        font-size: 14px;
-    }
-
-}
-
-
-/* =================================
-GENERAL MOBILE LAYOUT
-================================ */
-
-@media (max-width:768px) {
-
-    .container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 15px;
-    }
-
-    button {
-        width: 100%;
-    }
-
-}
-
-
-/* =================================
-SMALL PHONES
-================================ */
-
-@media (max-width:480px) {
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
-
+.section{
+padding:80px 0;
 }
 
 
@@ -149,645 +67,392 @@ SMALL PHONES
 IMAGE FLOW SECTION
 ================================ */
 
-@media (max-width:768px) {
+.image-flow{
+display:flex;
+gap:20px;
+}
 
-    .image-flow {
-        overflow-x: auto;
-        display: flex;
-        gap: 15px;
-    }
+.image-flow img{
+border-radius:10px;
+}
 
-    .image-flow img {
-        width: 220px;
-        border-radius: 10px;
-        flex-shrink: 0;
-    }
+
+/* =================================
+EXPERTISE SECTION
+================================ */
+
+.expertise{
+padding:100px 20px;
+}
+
+.expertise-wrapper{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:60px;
+align-items:center;
+}
+
+.expertise-text h3{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.expertise-text p{
+font-size:16px;
+color:#555;
+line-height:1.7;
+}
+
+.cards-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.card{
+width:170px;
+height:170px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:white;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:60px;
+margin-bottom:10px;
+}
+
+
+/* =================================
+STATS SECTION
+================================ */
+
+.stats-section{
+padding:100px 20px;
+}
+
+.stats-wrapper{
+display:flex;
+gap:50px;
+align-items:center;
+}
+
+.stats-intro{
+width:35%;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+width:65%;
+}
+
+.stat-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px;
+border-radius:16px;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h2{
+font-size:26px;
+}
+
+.stat-card p{
+font-size:15px;
+color:#555;
+}
+
+.stat-icon img{
+width:45px;
+}
+
+
+/* =================================
+BUTTON
+================================ */
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#0d6efd;
+color:white;
+cursor:pointer;
+font-size:15px;
+}
+
+
+/* =================================
+TABLET RESPONSIVE
+================================ */
+
+@media(max-width:1024px){
+
+h1{font-size:34px;}
+h2{font-size:28px;}
+h3{font-size:24px;}
+
+.section{
+padding:70px 0;
+}
+
+/* navbar */
+
+#navbar{
+flex-direction:column;
+gap:15px;
+}
+
+.navbar-nav{
+gap:20px;
+}
+
+
+/* expertise */
+
+.expertise-wrapper{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.cards-grid{
+grid-template-columns:repeat(2,1fr);
+justify-items:center;
+}
+
+.card{
+width:180px;
+height:180px;
+}
+
+
+/* stats */
+
+.stats-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.stats-intro{
+width:100%;
+}
+
+.stats-grid{
+width:100%;
+grid-template-columns:repeat(2,1fr);
+}
 
 }
 
 
 /* =================================
-EXPERTISE SECTION (ORBIT → GRID)
+MOBILE RESPONSIVE
 ================================ */
 
-@media (max-width:1100px) {
+@media(max-width:768px){
 
-    .expertise-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
+.container{
+padding:0 15px;
+}
 
-    .cards-grid {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        justify-items: center;
-        margin-top: 40px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+h1{font-size:30px;}
+h2{font-size:24px;}
+h3{font-size:20px;}
 
-    .card {
-        position: relative;
-        width: 170px;
-        height: 170px;
-    }
+p{
+font-size:15px;
+}
 
-    .c1,
-    .c2,
-    .c3,
-    .c4,
-    .c5,
-    .c6,
-    .c7,
-    .c8 {
-        top: auto;
-        left: auto;
-    }
+
+/* navbar */
+
+.navbar-nav{
+flex-direction:column;
+align-items:center;
+}
+
+
+/* image flow scroll */
+
+.image-flow{
+overflow-x:auto;
+gap:15px;
+}
+
+.image-flow img{
+width:220px;
+flex-shrink:0;
+}
+
+
+/* expertise */
+
+.cards-grid{
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+width:100%;
+height:auto;
+padding:25px;
+}
+
+
+/* stats */
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.stat-card{
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
+button{
+width:100%;
+}
 
 }
 
 
 /* =================================
-EXPERTISE MOBILE
+SMALL MOBILE
 ================================ */
 
-@media (max-width:600px) {
+@media(max-width:480px){
 
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
+h1{font-size:26px;}
+h2{font-size:20px;}
+h3{font-size:18px;}
 
-    .card {
-        width: 200px;
-        height: 200px;
-    }
-
-    .expertise {
-        padding: 80px 20px;
-    }
-
-    .expertise-text {
-        width: 100%;
-        max-width: 500px;
-        margin: auto;
-    }
-
-    .expertise-text h3 {
-        font-size: 32px;
-    }
-
+.section{
+padding:50px 0;
 }
 
+.cards-grid{
+grid-template-columns:1fr;
+}
 
+.stats-grid{
+grid-template-columns:1fr;
+}
+
+}
 /* =================================
-CARD IMAGE SIZE
+OUR EXPERTISE RESPONSIVE FIX
 ================================ */
 
-.card img {
-    width: 60px;
-    height: auto;
+/* KEEP ORIGINAL ORBIT DESIGN FOR DESKTOP */
+
+.expertise-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
 }
 
+/* TABLET VIEW */
 
-/* =================================
-WHY WE ARE DIFFERENT SECTION
-================================ */
+@media (max-width:1100px){
 
-/* remove fixed height */
-
-.stats-section {
-    height: auto;
-    overflow: visible;
+.expertise-wrapper{
+flex-direction:column;
+text-align:center;
 }
 
+.cards-grid{
 
-/* tablet */
+width:100%;
+height:auto;
 
-@media (max-width:1000px) {
+display:grid;
+grid-template-columns:repeat(2,1fr);
 
-    .stats-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
+gap:30px;
 
-    .stats-intro {
-        width: 100%;
-        text-align: center;
-    }
+justify-items:center;
 
-    .stats-grid {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-    }
+margin-top:40px;
 
-}
+max-width:600px;
 
-
-/* mobile */
-
-@media (max-width:600px) {
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-card {
-        flex-direction: column;
-        gap: 10px;
-    }
+margin-left:auto;
+margin-right:auto;
 
 }
 
-/* ===============================
-WHY WE ARE DIFFERENT RESPONSIVE
-================================ */
+/* REMOVE ORBIT POSITION */
 
-@media (max-width:1000px) {
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8{
 
-    .stats-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
+top:auto;
+left:auto;
+transform:none;
 
-    .stats-intro {
-        width: 100%;
-        text-align: center;
-    }
+}
 
-    .stats-grid {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-    }
+.card{
+
+position:relative;
+
+width:170px;
+height:170px;
+
+}
 
 }
 
 
-/* MOBILE */
+/* MOBILE VIEW */
 
-@media (max-width:600px) {
+@media (max-width:600px){
 
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
+.cards-grid{
 
-    .stat-card {
-        flex-direction: column;
-        gap: 10px;
-    }
+grid-template-columns:1fr;
 
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+.card{
 
-/* Tablet */
-@media (max-width: 992px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+width:200px;
+height:200px;
 
-/* Mobile */
-@media (max-width: 576px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.stat-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.stat-icon img {
-    width: 45px;
-}
-
-.expertise-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: center;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    .expertise-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =================================
-STATS GRID RESPONSIVE FIX
-================================ */
-
-@media (max-width:1000px) {
-
-    .stats-wrapper {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .stats-intro {
-        width: 100%;
-        text-align: center;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-    }
+margin:auto;
 
 }
-
-@media (max-width:600px) {
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
 
 }
 
 
-/* =================================
-EXPERTISE RESPONSIVE FIX
-================================ */
+/* TEXT ABOVE CARDS */
 
-@media (max-width:992px) {
+@media (max-width:1024px){
 
-    .expertise-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
+.expertise-text{
 
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
+order:-1;
+
+margin-bottom:30px;
 
 }
-
-@media (max-width:600px) {
-
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards in one row */
-        gap: 15px;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-
-}
-
-/* ===============================
-TABLET RESPONSIVE (768px–1024px)
-================================ */
-
-@media (max-width:1024px) {
-
-    /* stats section */
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .stat-card {
-        padding: 18px;
-    }
-
-    /* expertise layout */
-    .expertise-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    /* expertise cards */
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        gap: 25px;
-    }
-
-    .card {
-        width: 180px;
-        height: 180px;
-    }
-
-}
-
-/* =================================
-FIX STATS SECTION RESPONSIVE
-================================ */
-
-@media (max-width:1024px) {
-
-    .stats-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        gap: 20px;
-    }
-
-}
-
-@media (max-width:600px) {
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
-
-}
-
-
-/* =================================
-FIX EXPERTISE RESPONSIVE
-================================ */
-
-@media (max-width:1024px) {
-
-    .expertise-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .cards-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        justify-items: center;
-    }
-
-}
-
-@media (max-width:600px) {
-
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        width: 200px;
-        height: 200px;
-        margin: auto;
-    }
-
-}
-
-
-/* =================================
-ENSURE BASE GRID EXISTS
-================================ */
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.expertise-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-}
-
-/* =================================
-TEXT ABOVE CARDS FOR TABLET & MOBILE ONLY
-================================ */
-
-@media (max-width:1024px) {
-
-    .expertise-wrapper {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-
-    }
-
-    .expertise-text {
-
-        order: -1;
-        /* moves text above cards */
-
-        margin-bottom: 30px;
-
-    }
-
-}
-
-/* =================================
-STATS CARDS PERFECT RESPONSIVE
-================================ */
-
-/* desktop */
-.stats-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
-}
-
-
-/* tablet */
-@media (max-width:1024px) {
-
-    .stats-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 20px;
-
-        padding: 0 10px;
-
-    }
-
-}
-
-
-/* mobile */
-@media (max-width:768px) {
-
-    .stats-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 15px;
-
-    }
-
-    .stat-card {
-
-        padding: 18px;
-
-        border-radius: 18px;
-
-    }
-
-    .stat-card h2 {
-
-        font-size: 20px;
-
-    }
-
-    .stat-card p {
-
-        font-size: 14px;
-
-        line-height: 1.5;
-
-    }
-
-}
-
-
-/* small mobile */
-@media (max-width:420px) {
-
-    .stats-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-}
-
-/* =================================
-FIX DESKTOP TEXT WIDTH (ONLY TEXT)
-================================ */
-
-@media (min-width:1100px) {
-
-    .expertise-wrapper {
-
-        grid-template-columns: 520px 1fr;
-
-        gap: 70px;
-
-    }
-
-    .expertise-text {
-
-        max-width: 520px;
-
-    }
-
-    .expertise-text p {
-
-        max-width: 520px;
-
-        line-height: 1.7;
-
-        font-size: 16px;
-
-        color: #555;
-
-    }
-
-}
-
-/* =================================
-FIX EXPERTISE TEXT LAYOUT (FINAL)
-================================ */
-
-/* DESKTOP ONLY */
-
-@media (min-width:1100px) {
-
-    .expertise-wrapper {
-
-        display: grid;
-
-        grid-template-columns: 520px 1fr;
-        /* wider text column */
-
-        gap: 80px;
-
-        align-items: center;
-
-    }
-
-    .expertise-text {
-
-        width: 100%;
-
-        max-width: 520px;
-
-    }
-
-    .expertise-text h3 {
-
-        font-size: 48px;
-
-        line-height: 1.15;
-
-        margin-bottom: 20px;
-
-    }
-
-    .expertise-text p {
-
-        max-width: 520px;
-        /* prevents vertical paragraph */
-
-        font-size: 16px;
-
-        line-height: 1.7;
-
-        color: #555;
-
-    }
 
 }
